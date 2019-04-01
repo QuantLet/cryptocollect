@@ -1,24 +1,24 @@
 #!/bin/bash
-cd ~/coinbase_WS/logs
+cd ~/cryptocollect/logs
 
-COMMAND1=(python ~/coinbase_WS/scripts/cbpro.py)
-COMMAND2=(python ~/coinbase_WS/scripts/bitfinex_btc.py)
-COMMAND3=(python ~/coinbase_WS/scripts/bitfinex_dash.py)
-COMMAND4=(python ~/coinbase_WS/scripts/bitfinex_eos.py)
-COMMAND5=(python ~/coinbase_WS/scripts/bitfinex_etc.py)
-COMMAND6=(python ~/coinbase_WS/scripts/bitfinex_eth.py)
-COMMAND7=(python ~/coinbase_WS/scripts/bitfinex_iota.py)
-COMMAND8=(python ~/coinbase_WS/scripts/bitfinex_ltc.py)
-COMMAND9=(python ~/coinbase_WS/scripts/bitfinex_xlm.py)
-COMMAND10=(python ~/coinbase_WS/scripts/bitfinex_xmr.py)
-COMMAND11=(python ~/coinbase_WS/scripts/bitfinex_xrp.py)
-COMMAND12=(python ~/coinbase_WS/scripts/bitfinex_zrx.py)
-COMMAND13=(python ~/coinbase_WS/scripts/binance.py)
-COMMAND14=(python ~/coinbase_WS/scripts/okex_bch.py)
-COMMAND15=(python ~/coinbase_WS/scripts/okex_btc.py)
-COMMAND16=(python ~/coinbase_WS/scripts/okex_etc.py)
-COMMAND17=(python ~/coinbase_WS/scripts/okex_eth.py)
-COMMAND18=(python ~/coinbase_WS/scripts/okex_ltc.py)
+COMMAND1=(python ~/cryptocollect/scripts/cbpro.py)
+COMMAND2=(python ~/cryptocollect/scripts/bitfinex_btc.py)
+COMMAND3=(python ~/cryptocollect/scripts/bitfinex_dash.py)
+COMMAND4=(python ~/cryptocollect/scripts/bitfinex_eos.py)
+COMMAND5=(python ~/cryptocollect/scripts/bitfinex_etc.py)
+COMMAND6=(python ~/cryptocollect/scripts/bitfinex_eth.py)
+COMMAND7=(python ~/cryptocollect/scripts/bitfinex_iota.py)
+COMMAND8=(python ~/cryptocollect/scripts/bitfinex_ltc.py)
+COMMAND9=(python ~/cryptocollect/scripts/bitfinex_xlm.py)
+COMMAND10=(python ~/cryptocollect/scripts/bitfinex_xmr.py)
+COMMAND11=(python ~/cryptocollect/scripts/bitfinex_xrp.py)
+COMMAND12=(python ~/cryptocollect/scripts/bitfinex_zrx.py)
+COMMAND13=(python ~/cryptocollect/scripts/binance.py)
+COMMAND14=(python ~/cryptocollect/scripts/okex_bch.py)
+COMMAND15=(python ~/cryptocollect/scripts/okex_btc.py)
+COMMAND16=(python ~/cryptocollect/scripts/okex_etc.py)
+COMMAND17=(python ~/cryptocollect/scripts/okex_eth.py)
+COMMAND18=(python ~/cryptocollect/scripts/okex_ltc.py)
 
 touch COMMAND1_failed
 touch COMMAND2_failed
