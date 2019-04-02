@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from websocket import WebSocketApp
 import datetime
 
-mongo_client = MongoClient('mongodb://localhost:27017/')
+mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@35.204.101.74:27017/cryptocurrency')
 db = mongo_client['cryptocurrency']
 hitbtc_coll = db['hitbtc']
 
