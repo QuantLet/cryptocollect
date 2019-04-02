@@ -483,6 +483,6 @@ do
 
 
 
-        sleep 60
+        sleep 30
 
 done

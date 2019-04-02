@@ -12,7 +12,6 @@ def on_message(mes):
     print("Bitfinex - 10 - XMR-USD:" + " " + mes)
     message = json.loads(mes)
     if message[1] in ('tu'):
-        #print(message[2])
         result = {'_id': message[2][0], 't': message[2][1], 'v': message[2][2], 'p': message[2][3],
                   'c': 'XMR-USD'}
         res = bitfinex_coll.insert_one(result)

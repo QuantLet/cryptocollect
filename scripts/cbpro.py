@@ -19,7 +19,6 @@ ws = WebSocketApp('wss://ws-feed.pro.coinbase.com')
 
 ws.on_open = lambda self: self.send(json.dumps({
     "type": "subscribe",
-    #"product_ids": ["BTC-USD", "ETH-USD", "LTC-USD"],
     "channels": [
         {
             "name": "matches",
