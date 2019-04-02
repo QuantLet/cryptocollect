@@ -9,7 +9,7 @@ bitfinex_coll = db['bitfinex']
 
 def on_message(mes):
     print(datetime.datetime.now())
-    print("4 - ETC-USD:" + " " + mes)
+    print("Bitfinex - 5 - ETC-USD:" + " " + mes)
     message = json.loads(mes)
     if message[1] in ('tu'):
         #print(message[2])

@@ -22,7 +22,7 @@ ws.on_open = lambda self: self.send(json.dumps({
     #"product_ids": ["BTC-USD", "ETH-USD", "LTC-USD"],
     "params":
         {
-            "symbol": "BTCUSD"
+            "symbol": "LTCUSD"
         }
     }))
 

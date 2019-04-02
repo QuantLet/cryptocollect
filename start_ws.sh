@@ -1,7 +1,8 @@
 #!/bin/bash
 cd ~/cryptocollect/logs
 
-COMMAND1=(python ~/cryptocollect/scripts/cbpro.py)
+COMMAND0=(python ~/cryptocollect/scripts/cbpro.py)
+COMMAND1=(python ~/cryptocollect/scripts/bitfinex_bch.py)
 COMMAND2=(python ~/cryptocollect/scripts/bitfinex_btc.py)
 COMMAND3=(python ~/cryptocollect/scripts/bitfinex_dash.py)
 COMMAND4=(python ~/cryptocollect/scripts/bitfinex_eos.py)
@@ -19,7 +20,25 @@ COMMAND15=(python ~/cryptocollect/scripts/okex_btc.py)
 COMMAND16=(python ~/cryptocollect/scripts/okex_etc.py)
 COMMAND17=(python ~/cryptocollect/scripts/okex_eth.py)
 COMMAND18=(python ~/cryptocollect/scripts/okex_ltc.py)
+COMMAND19=(python ~/cryptocollect/scripts/hitbtc_bch.py)
+COMMAND20=(python ~/cryptocollect/scripts/hitbtc_btc.py)
+COMMAND21=(python ~/cryptocollect/scripts/hitbtc_dash.py)
+COMMAND22=(python ~/cryptocollect/scripts/hitbtc_eos.py)
+COMMAND23=(python ~/cryptocollect/scripts/hitbtc_etc.py)
+COMMAND24=(python ~/cryptocollect/scripts/hitbtc_eth.py)
+COMMAND25=(python ~/cryptocollect/scripts/hitbtc_iota.py)
+COMMAND26=(python ~/cryptocollect/scripts/hitbtc_ltc.py)
+COMMAND27=(python ~/cryptocollect/scripts/hitbtc_xlm.py)
+COMMAND28=(python ~/cryptocollect/scripts/hitbtc_xmr.py)
+COMMAND29=(python ~/cryptocollect/scripts/hitbtc_xrp.py)
+COMMAND30=(python ~/cryptocollect/scripts/hitbtc_zrx.py)
+COMMAND31=(python ~/cryptocollect/scripts/bitstamp_bch.py)
+COMMAND32=(python ~/cryptocollect/scripts/bitstamp_btc.py)
+COMMAND33=(python ~/cryptocollect/scripts/bitstamp_eth.py)
+COMMAND34=(python ~/cryptocollect/scripts/bitstamp_ltc.py)
+COMMAND35=(python ~/cryptocollect/scripts/bitstamp_xrp.py)
 
+touch COMMAND0_failed
 touch COMMAND1_failed
 touch COMMAND2_failed
 touch COMMAND3_failed
@@ -38,6 +57,23 @@ touch COMMAND15_failed
 touch COMMAND16_failed
 touch COMMAND17_failed
 touch COMMAND18_failed
+touch COMMAND19_failed
+touch COMMAND20_failed
+touch COMMAND21_failed
+touch COMMAND22_failed
+touch COMMAND23_failed
+touch COMMAND24_failed
+touch COMMAND25_failed
+touch COMMAND26_failed
+touch COMMAND27_failed
+touch COMMAND28_failed
+touch COMMAND29_failed
+touch COMMAND30_failed
+touch COMMAND31_failed
+touch COMMAND32_failed
+touch COMMAND33_failed
+touch COMMAND34_failed
+touch COMMAND35_failed
 
 while true
 
@@ -223,6 +259,220 @@ do
 
         fi
 
-        sleep 30
+		if [ -e COMMAND19_failed ]
+
+        then
+
+                # (Re)start Command19
+
+                rm -f COMMAND19_failed; ("${COMMAND19[@]}"; touch COMMAND19_failed)&
+
+        fi
+
+		if [ -e COMMAND20_failed ]
+
+        then
+
+                # (Re)start Command20
+
+                rm -f COMMAND20_failed; ("${COMMAND20[@]}"; touch COMMAND20_failed)&
+
+        fi
+
+		if [ -e COMMAND21_failed ]
+
+        then
+
+                # (Re)start Command21
+
+                rm -f COMMAND21_failed; ("${COMMAND21[@]}"; touch COMMAND21_failed)&
+
+        fi
+
+		if [ -e COMMAND22_failed ]
+
+        then
+
+                # (Re)start Command22
+
+                rm -f COMMAND22_failed; ("${COMMAND22[@]}"; touch COMMAND22_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND23_failed ]
+
+        then
+
+                # (Re)start Command23
+
+                rm -f COMMAND23_failed; ("${COMMAND23[@]}"; touch COMMAND23_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND24_failed ]
+
+        then
+
+                # (Re)start Command24
+
+                rm -f COMMAND24_failed; ("${COMMAND24[@]}"; touch COMMAND24_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND25_failed ]
+
+        then
+
+                # (Re)start Command25
+
+                rm -f COMMAND25_failed; ("${COMMAND25[@]}"; touch COMMAND25_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND26_failed ]
+
+        then
+
+                # (Re)start Command26
+
+                rm -f COMMAND26_failed; ("${COMMAND26[@]}"; touch COMMAND26_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND27_failed ]
+
+        then
+
+                # (Re)start Command27
+
+                rm -f COMMAND27_failed; ("${COMMAND27[@]}"; touch COMMAND27_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND28_failed ]
+
+        then
+
+                # (Re)start Command28
+
+                rm -f COMMAND28_failed; ("${COMMAND28[@]}"; touch COMMAND28_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND29_failed ]
+
+        then
+
+                # (Re)start Command29
+
+                rm -f COMMAND29_failed; ("${COMMAND29[@]}"; touch COMMAND29_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND30_failed ]
+
+        then
+
+                # (Re)start Command30
+
+                rm -f COMMAND30_failed; ("${COMMAND30[@]}"; touch COMMAND30_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND31_failed ]
+
+        then
+
+                # (Re)start Command31
+
+                rm -f COMMAND31_failed; ("${COMMAND31[@]}"; touch COMMAND31_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND32_failed ]
+
+        then
+
+                # (Re)start Command32
+
+                rm -f COMMAND32_failed; ("${COMMAND32[@]}"; touch COMMAND32_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND33_failed ]
+
+        then
+
+                # (Re)start Command33
+
+                rm -f COMMAND33_failed; ("${COMMAND33[@]}"; touch COMMAND33_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND34_failed ]
+
+        then
+
+                # (Re)start Command34
+
+                rm -f COMMAND34_failed; ("${COMMAND34[@]}"; touch COMMAND34_failed)&
+
+        fi
+
+
+
+
+		if [ -e COMMAND35_failed ]
+
+        then
+
+                # (Re)start Command35
+
+                rm -f COMMAND35_failed; ("${COMMAND35[@]}"; touch COMMAND35_failed)&
+
+        fi
+
+
+
+
+
+
+        sleep 60
 
 done
