@@ -1,7 +1,6 @@
 #!/bin/bash
 cd ~/cryptocollect/logs
 
-COMMAND0=(python ~/cryptocollect/scripts/cbpro.py)
 COMMAND1=(python ~/cryptocollect/scripts/bitfinex_bch.py)
 COMMAND2=(python ~/cryptocollect/scripts/bitfinex_btc.py)
 COMMAND3=(python ~/cryptocollect/scripts/bitfinex_dash.py)
@@ -38,8 +37,8 @@ COMMAND33=(python ~/cryptocollect/scripts/bitstamp_eth.py)
 COMMAND34=(python ~/cryptocollect/scripts/bitstamp_ltc.py)
 COMMAND35=(python ~/cryptocollect/scripts/bitstamp_xrp.py)
 COMMAND36=(python ~/cryptocollect/scripts/poloniex.py)
+COMMAND37=(python ~/cryptocollect/scripts/cbpro.py)
 
-touch COMMAND0_failed
 touch COMMAND1_failed
 touch COMMAND2_failed
 touch COMMAND3_failed
@@ -76,32 +75,23 @@ touch COMMAND33_failed
 touch COMMAND34_failed
 touch COMMAND35_failed
 touch COMMAND36_failed
+touch COMMAND37_failed
 
 while true
 
 do
-
-        if [ -e COMMAND0_failed ]
-
-        then
-
-                # (Re)start Command0
-
-                rm -f COMMAND0_failed; ("${COMMAND0[@]}"; touch COMMAND0_failed)&
-
-        fi
-
+        
         if [ -e COMMAND1_failed ]
 
         then
 
                 # (Re)start Command1
 
-                rm -f COMMAND1_failed; ("${COMMAND1[@]}"; touch COMMAND1_failed)&
+                rm -f COMMAND1_failed; "${COMMAND1[@]}"; touch COMMAND1_failed)&
 
         fi
 
-         if [ -e COMMAND2_failed ]
+        if [ -e COMMAND2_failed ]
 
         then
 
@@ -487,6 +477,16 @@ do
                 # (Re)start Command36
 
                 rm -f COMMAND36_failed; ("${COMMAND36[@]}"; touch COMMAND36_failed)&
+
+        fi
+		
+        if [ -e COMMAND37_failed ]
+		
+		        then
+
+                # (Re)start Command37
+
+                rm -f COMMAND37_failed; ("${COMMAND37[@]}"; touch COMMAND37_failed)&
 
         fi
 
