@@ -15,7 +15,7 @@ def on_message(mes):
               'buy_id': message['data']['buy_order_id'], 'side': message['data']['type'], 't': message['data']['microtimestamp'], 'c': re.sub('live_trades_', '', message['channel'])}
         print(datetime.datetime.now())
         print(result)
-        res = bitstamp_coll.insert_one(message)
+        res = bitstamp_coll.insert_one(result)
 
 
 ws = websocket.WebSocketApp('wss://ws.bitstamp.net')

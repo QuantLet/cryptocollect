@@ -491,8 +491,6 @@ do
         fi
 
 
-
-
         sleep 15
 
 done
