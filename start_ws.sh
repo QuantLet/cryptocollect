@@ -37,6 +37,7 @@ COMMAND32=(python ~/cryptocollect/scripts/bitstamp_btc.py)
 COMMAND33=(python ~/cryptocollect/scripts/bitstamp_eth.py)
 COMMAND34=(python ~/cryptocollect/scripts/bitstamp_ltc.py)
 COMMAND35=(python ~/cryptocollect/scripts/bitstamp_xrp.py)
+COMMAND36=(python ~/cryptocollect/scripts/poloniex.py)
 
 touch COMMAND0_failed
 touch COMMAND1_failed
@@ -74,6 +75,7 @@ touch COMMAND32_failed
 touch COMMAND33_failed
 touch COMMAND34_failed
 touch COMMAND35_failed
+touch COMMAND36_failed
 
 while true
 
@@ -468,7 +470,15 @@ do
 
         fi
 
+        if [ -e COMMAND36_failed ]
 
+        then
+
+                # (Re)start Command36
+
+                rm -f COMMAND36_failed; ("${COMMAND36[@]}"; touch COMMAND36_failed)&
+
+        fi
 
 
 
