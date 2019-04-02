@@ -87,7 +87,7 @@ do
 
                 # (Re)start Command1
 
-                rm -f COMMAND1_failed; "${COMMAND1[@]}"; touch COMMAND1_failed)&
+                rm -f COMMAND1_failed; ("${COMMAND1[@]}"; touch COMMAND1_failed)&
 
         fi
 
