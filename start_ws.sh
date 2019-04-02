@@ -81,6 +81,16 @@ while true
 
 do
 
+        if [ -e COMMAND0_failed ]
+
+        then
+
+                # (Re)start Command0
+
+                rm -f COMMAND0_failed; ("${COMMAND0[@]}"; touch COMMAND0_failed)&
+
+        fi
+
         if [ -e COMMAND1_failed ]
 
         then
@@ -483,6 +493,6 @@ do
 
 
 
-        sleep 30
+        sleep 15
 
 done
