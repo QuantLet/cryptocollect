@@ -4,7 +4,7 @@ import websocket
 import datetime
 import re
 
-mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@35.204.101.74:27017/cryptocurrency')
+mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
 db = mongo_client['cryptocurrency']
 bitstamp_coll = db['bitstamp']
 
