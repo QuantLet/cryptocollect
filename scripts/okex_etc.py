@@ -22,7 +22,7 @@ def on_message(mes):
     message = json.loads(mes, encoding = 'utf-8')
     if message[0]['data'][0][4] in ['bid', 'ask']:
         result = {'_id': message[0]['data'][0][0], 'p': message[0]['data'][0][1], 'v': message[0]['data'][0][2],
-                  't': message[0]['data'][0][3], 'side': message[0]['data'][0][4], 'c': 'ETC-USD'}
+                  't': datetime.datetime.now().timestamp(), 'side': message[0]['data'][0][4], 'c': 'ETC-USD'}
         print(datetime.datetime.now())
         print(result)
         res = okex_coll.insert_one(result)

@@ -22,7 +22,7 @@ def on_message(mes):
     message = json.loads(mes, encoding = 'utf-8')
     if message[0]['data'][0][4] in ['bid', 'ask']:
         result = {'_id': message[0]['data'][0][0], 'p': message[0]['data'][0][1], 'v': message[0]['data'][0][2],
-                  't': message[0]['data'][0][3], 'side': message[0]['data'][0][4], 'c': 'BCH-USD'}
+                  't': datetime.datetime.now().timestamp(), 'side': message[0]['data'][0][4], 'c': 'BCH-USD'}
         print(datetime.datetime.now())
         print(result)
         res = okex_coll.insert_one(result)
@@ -38,3 +38,5 @@ ws.on_open = lambda self: self.send(json.dumps({
 ws.on_message = lambda self, evt: on_message(evt)
 
 ws.run_forever(ping_interval=10, ping_timeout=5)
+
+print(datetime.datetime.now())
