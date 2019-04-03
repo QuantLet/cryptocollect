@@ -5,7 +5,7 @@ import datetime
 
 mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
 db = mongo_client['cryptocurrency']
-poloniex_coll = db['poloniex']
+poloniex_coll = db['poloniex_']
 
 currencies = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 

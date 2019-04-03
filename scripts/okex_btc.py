@@ -6,7 +6,7 @@ import datetime
 
 mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
 db = mongo_client['cryptocurrency']
-okex_coll = db['okex']
+okex_coll = db['ok_ex']
 
 def inflate(data):
     decompress = zlib.decompressobj(
