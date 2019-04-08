@@ -6,7 +6,7 @@ import datetime
 
 mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
 db = mongo_client['cryptocurrency']
-okex_coll = db['ok_ex']
+okex_coll = db['okex']
 
 def inflate(data):
     decompress = zlib.decompressobj(
@@ -22,8 +22,7 @@ def on_message(mes):
     message = json.loads(mes, encoding = 'utf-8')
     if message[0]['data'][0][4] in ['bid', 'ask']:
         result = {'_id': message[0]['data'][0][0], 'p': message[0]['data'][0][1], 'v': message[0]['data'][0][2],
-                  't': datetime.datetime.now().timestamp(), 'side': message[0]['data'][0][4], 'c': 'LTC-USD'}
-        print(datetime.datetime.now())
+                  't': datetime.datetime.utcnow(), 'side': message[0]['data'][0][4], 'c': 'LTC-USD'}
         print(result)
         res = okex_coll.insert_one(result)
 
