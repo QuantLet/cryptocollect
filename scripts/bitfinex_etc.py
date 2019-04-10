@@ -12,8 +12,8 @@ def on_message(mes):
     print("Bitfinex - 5 - ETC-USD:" + " " + mes)
     message = json.loads(mes)
     if message[1] in ('tu'):
-        result = {'_id': message[2][0], 't': message[2][1], 'v': message[2][2], 'p': message[2][3],
-                  'c': 'ETC-USD'}
+        result = {'_id': message[2][0], 't': message[2][1], 'q': message[2][2], 'p': message[2][3],
+                  's': 'ETC-USD', 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
         res = bitfinex_coll.insert_one(result)
 
 

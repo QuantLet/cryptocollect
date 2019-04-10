@@ -11,8 +11,9 @@ def on_message(mes):
     #print(mes)
     message = json.loads(mes)
     print(datetime.datetime.now())
-    print(message)
-    res = binance_coll.insert_one(message)
+    result = {'_id': message['t'], 't': message['T'], 's':  message['s'], 'p':  message['p'], 'q': message['q'],  'buyer_id':  message['b'], 'seller_id':  message['a'], 'm':  message['m'], 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
+    print(result)
+    res = binance_coll.insert_one(result)
     #print("BTC-USD:" + " " + message)
 
 ws = WebSocketApp('wss://stream.binance.com:9443/ws/bchusdt@trade/ltcusdt@trade/btcusdt@trade/eosusdt@trade/etcusdt@trade/ethusdt@trade/iotausdt@trade/xlmusdt@trade/xmrusdt@trade/xrpusdt@trade/zrxusdt@trade')

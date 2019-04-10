@@ -18,11 +18,11 @@ def inflate(data):
 
 def on_message(mes):
     mes = inflate(mes)
-    print(mes)
+        #print(mes)
     message = json.loads(mes, encoding = 'utf-8')
     if message[0]['data'][0][4] in ['bid', 'ask']:
-        result = {'_id': message[0]['data'][0][0], 'p': message[0]['data'][0][1], 'v': message[0]['data'][0][2],
-                  't': datetime.datetime.utcnow(), 'side': message[0]['data'][0][4], 'c': 'LTC-USD'}
+        result = {'_id': message[0]['data'][0][0], 'p': message[0]['data'][0][1], 'q': message[0]['data'][0][2],
+                  't': datetime.datetime.utcnow(), 'side': message[0]['data'][0][4], 's': 'LTC-USD', 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
         print(result)
         res = okex_coll.insert_one(result)
 

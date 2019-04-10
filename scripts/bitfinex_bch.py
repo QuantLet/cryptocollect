@@ -9,11 +9,11 @@ bitfinex_coll = db['bitfinex']
 
 def on_message(mes):
     print(datetime.datetime.now())
-    print("Bitfinex - 1 - BCH-USD:" + " " + mes)
     message = json.loads(mes)
+    print(message)
     if message[1] in ('tu'):
-        result = {'_id': message[2][0], 't': message[2][1], 'v': message[2][2], 'p': message[2][3],
-                  'c': 'BCH-USD'}
+        result = {'_id': message[2][0], 't': message[2][1], 'q': message[2][2], 'p': message[2][3],
+                  's': 'BCH-USD', 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
         res = bitfinex_coll.insert_one(result)
 
 

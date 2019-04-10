@@ -10,7 +10,7 @@ hitbtc_coll = db['hitbtc']
 def on_message(mes):
     print(mes)
     message = json.loads(mes)
-    result = {'_id': message['params']['data'][0]['id'], 'p': message['params']['data'][0]['price'], 'q': message['params']['data'][0]['quantity'], 'side': message['params']['data'][0]['side'], 't': message['params']['data'][0]['timestamp'], 'c': message['params']['symbol']}
+    result = {'_id': message['params']['data'][0]['id'], 'p': message['params']['data'][0]['price'], 'q': message['params']['data'][0]['quantity'], 'side': message['params']['data'][0]['side'], 't': message['params']['data'][0]['timestamp'], 's': message['params']['symbol'], 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
     print(datetime.datetime.now())
     print(result)
     res = hitbtc_coll.insert_one(result)

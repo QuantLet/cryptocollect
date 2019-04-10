@@ -10,10 +10,11 @@ cbpro_coll = db['cbpro']
 def on_message(mes):
     #print(mes)
     message = json.loads(mes)
-    if message['type'] in 'last_match':
+    if message['type'] in ('last_match', 'match'):
         print(datetime.datetime.now())
         print(message)
-        res = cbpro_coll.insert_one(message)
+        result = {"_id": message['trade_id'], "maker_order_id": message['maker_order_id'], "taker_order_id": message['taker_order_id'], "side": message['side'], "q": message['size'], "p": message['price'], "s": message['product_id'], "t": message['time'], 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
+        res = cbpro_coll.insert_one(result)
 
 ws = WebSocketApp('wss://ws-feed.pro.coinbase.com')
 
