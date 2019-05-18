@@ -8,10 +8,11 @@ db = mongo_client['cryptocurrency']
 binance_coll = db['binance']
 
 def on_message(mes):
-    #print(mes)
+    print(mes)
     message = json.loads(mes)
     print(datetime.datetime.now())
-    result = {'_id': message['t'], 't': message['T'], 's':  message['s'], 'p':  message['p'], 'q': message['q'],  'buyer_id':  message['b'], 'seller_id':  message['a'], 'm':  message['m'], 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
+    result = {'_id': message['t'], 't': message['T'], 's':  message['s'], 'p':  message['p'], 'q': message['q'],  'buyer_id':  message['b'],
+              'seller_id':  message['a'], 'm':  message['m'], 'date': datetime.datetime.utcnow().strftime('%Y-%m-%d')}
     print(result)
     res = binance_coll.insert_one(result)
     #print("BTC-USD:" + " " + message)
@@ -20,4 +21,4 @@ ws = WebSocketApp('wss://stream.binance.com:9443/ws/bchusdt@trade/ltcusdt@trade/
 
 ws.on_message = lambda self, evt: on_message(evt)
 
-ws.run_forever()
+ws.run_forever(ping_interval=10, ping_timeout=5)
