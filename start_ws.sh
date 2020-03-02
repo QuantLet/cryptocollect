@@ -14,30 +14,26 @@ COMMAND10=(python ~/cryptocollect/scripts/bitfinex_xmr.py)
 COMMAND11=(python ~/cryptocollect/scripts/bitfinex_xrp.py)
 COMMAND12=(python ~/cryptocollect/scripts/bitfinex_zrx.py)
 COMMAND13=(python ~/cryptocollect/scripts/binance.py)
-COMMAND14=(python ~/cryptocollect/scripts/okex_bch.py)
-COMMAND15=(python ~/cryptocollect/scripts/okex_btc.py)
-COMMAND16=(python ~/cryptocollect/scripts/okex_etc.py)
-COMMAND17=(python ~/cryptocollect/scripts/okex_eth.py)
-COMMAND18=(python ~/cryptocollect/scripts/okex_ltc.py)
-COMMAND19=(python ~/cryptocollect/scripts/hitbtc_bch.py)
-COMMAND20=(python ~/cryptocollect/scripts/hitbtc_btc.py)
-COMMAND21=(python ~/cryptocollect/scripts/hitbtc_dash.py)
-COMMAND22=(python ~/cryptocollect/scripts/hitbtc_eos.py)
-COMMAND23=(python ~/cryptocollect/scripts/hitbtc_etc.py)
-COMMAND24=(python ~/cryptocollect/scripts/hitbtc_eth.py)
-COMMAND25=(python ~/cryptocollect/scripts/hitbtc_iota.py)
-COMMAND26=(python ~/cryptocollect/scripts/hitbtc_ltc.py)
-COMMAND27=(python ~/cryptocollect/scripts/hitbtc_xlm.py)
-COMMAND28=(python ~/cryptocollect/scripts/hitbtc_xmr.py)
-COMMAND29=(python ~/cryptocollect/scripts/hitbtc_xrp.py)
-COMMAND30=(python ~/cryptocollect/scripts/hitbtc_zrx.py)
-COMMAND31=(python ~/cryptocollect/scripts/bitstamp_bch.py)
-COMMAND32=(python ~/cryptocollect/scripts/bitstamp_btc.py)
-COMMAND33=(python ~/cryptocollect/scripts/bitstamp_eth.py)
-COMMAND34=(python ~/cryptocollect/scripts/bitstamp_ltc.py)
-COMMAND35=(python ~/cryptocollect/scripts/bitstamp_xrp.py)
-COMMAND36=(python ~/cryptocollect/scripts/poloniex.py)
-COMMAND37=(python ~/cryptocollect/scripts/cbpro.py)
+COMMAND15=(python ~/cryptocollect/scripts/okex.py)
+COMMAND16=(python ~/cryptocollect/scripts/hitbtc_bch.py)
+COMMAND17=(python ~/cryptocollect/scripts/hitbtc_btc.py)
+COMMAND18=(python ~/cryptocollect/scripts/hitbtc_dash.py)
+COMMAND19=(python ~/cryptocollect/scripts/hitbtc_eos.py)
+COMMAND20=(python ~/cryptocollect/scripts/hitbtc_etc.py)
+COMMAND21=(python ~/cryptocollect/scripts/hitbtc_eth.py)
+COMMAND22=(python ~/cryptocollect/scripts/hitbtc_iota.py)
+COMMAND23=(python ~/cryptocollect/scripts/hitbtc_ltc.py)
+COMMAND24=(python ~/cryptocollect/scripts/hitbtc_xlm.py)
+COMMAND25=(python ~/cryptocollect/scripts/hitbtc_xmr.py)
+COMMAND26=(python ~/cryptocollect/scripts/hitbtc_xrp.py)
+COMMAND27=(python ~/cryptocollect/scripts/hitbtc_zrx.py)
+COMMAND28=(python ~/cryptocollect/scripts/bitstamp_bch.py)
+COMMAND29=(python ~/cryptocollect/scripts/bitstamp_btc.py)
+COMMAND30=(python ~/cryptocollect/scripts/bitstamp_eth.py)
+COMMAND31=(python ~/cryptocollect/scripts/bitstamp_ltc.py)
+COMMAND32=(python ~/cryptocollect/scripts/bitstamp_xrp.py)
+COMMAND33=(python ~/cryptocollect/scripts/poloniex.py)
+COMMAND34=(python ~/cryptocollect/scripts/cbpro.py)
 
 touch COMMAND1_failed
 touch COMMAND2_failed
@@ -73,9 +69,6 @@ touch COMMAND31_failed
 touch COMMAND32_failed
 touch COMMAND33_failed
 touch COMMAND34_failed
-touch COMMAND35_failed
-touch COMMAND36_failed
-touch COMMAND37_failed
 
 while true
 
@@ -457,38 +450,6 @@ do
 
         fi
 
-
-
-
-		if [ -e COMMAND35_failed ]
-
-        then
-
-                # (Re)start Command35
-
-                rm -f COMMAND35_failed; ("${COMMAND35[@]}"; touch COMMAND35_failed)&
-
-        fi
-
-        if [ -e COMMAND36_failed ]
-
-        then
-
-                # (Re)start Command36
-
-                rm -f COMMAND36_failed; ("${COMMAND36[@]}"; touch COMMAND36_failed)&
-
-        fi
-		
-        if [ -e COMMAND37_failed ]
-		
-		        then
-
-                # (Re)start Command37
-
-                rm -f COMMAND37_failed; ("${COMMAND37[@]}"; touch COMMAND37_failed)&
-
-        fi
 
 
         sleep 15

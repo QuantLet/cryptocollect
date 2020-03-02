@@ -28,7 +28,7 @@ def on_message(mes):
         res = okex_coll.insert_one(result)
 
 
-ws = WebSocketApp('wss://real.okex.com:10440/ws/v1')
+ws = WebSocketApp('wss://real.OKEx.com:8443/ws/v3')
 
 ws.on_open = lambda self: self.send(json.dumps({
     "event": "addChannel",
