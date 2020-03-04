@@ -1,0 +1,10 @@
+
+[20200303,17:14:33] auth error:("hostname 'www.deribit.com' doesn't match 'plutus.deribit.com'",)
+[20200303,17:14:33] public/get_book_summary_by_currency
+[20200304,19:40:07] Auth OK
+############
+[20200304,19:40:07] public/auth
+[20200304,19:40:07] {'jsonrpc': '2.0', 'id': 9929, 'error': {'message': 'unauthorized', 'code': 13009}, 'testnet': False, 'usIn': 1583347207392019, 'usOut': 1583347207392142, 'usDiff': 123}
+[20200304,19:40:07] _sender error: 'result'
+[20200304,19:40:07] public/get_book_summary_by_currency
+[20200304,19:40:07] public/get_order_book
