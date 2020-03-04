@@ -34,7 +34,7 @@ COMMAND31=(python ~/cryptocollect/scripts/bitstamp_ltc.py)
 COMMAND32=(python ~/cryptocollect/scripts/bitstamp_xrp.py)
 COMMAND33=(python ~/cryptocollect/scripts/poloniex.py)
 COMMAND34=(python ~/cryptocollect/scripts/cbpro.py)
-COMMAND35=(python ~/cryptocollect/scripts/deribit-trades/main.py)
+COMMAND35=(python3 ~/cryptocollect/scripts/deribit-trades/main.py)
 
 touch COMMAND1_failed
 touch COMMAND2_failed
