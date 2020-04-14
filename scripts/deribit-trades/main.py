@@ -50,10 +50,10 @@ def check_memory(_list, max_len = 1000):
 	return _list
 
 
-client = MongoClient('mongodb://localhost:27017')
-db = client['pymongo_test']
-orderbooks = db.orderbooks
-transactions = db.transactions
+client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
+db = client['cryptocurrency']
+orderbooks = db['deribit_orderbooks']
+transactions = db['deribit_transactions']
 
 
 orderbook_file 			= 'orderbooks'
