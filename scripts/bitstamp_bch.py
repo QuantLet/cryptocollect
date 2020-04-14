@@ -4,7 +4,14 @@ import websocket
 import datetime
 import re
 
-mongo_client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
+from pathlib import Path
+
+d = Path().resolve().parent
+
+with open(str(d) + '/credentials.txt', 'r') as file:
+    credentials = file.read().replace('\n', '')
+
+mongo_client = MongoClient(credentials) # e.g. 'mongodb://localhost:27017'
 db = mongo_client['cryptocurrency']
 bitstamp_coll = db['bitstamp']
 
