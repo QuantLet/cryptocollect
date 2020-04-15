@@ -7,6 +7,12 @@ import sys
 from interface import deribit_interface
 from load_credentials import CLIENT_ID, CLIENT_SECRET
 from pymongo import MongoClient
+from pathlib import Path
+
+d = Path().resolve().parent
+
+with open(str(d) + '/credentials.txt', 'r') as file:
+    credentials = file.read().replace('\n', '')
 
 if CLIENT_ID == '' or CLIENT_SECRET == '':
 	sys.exit('Run save_credentials.py first in order to store your credentials on this machine!')
@@ -50,7 +56,7 @@ def check_memory(_list, max_len = 1000):
 	return _list
 
 
-client = MongoClient('mongodb://dataadmin:daPknihTi7@localhost/cryptocurrency')
+client = MongoClient(credentials) # e.g. 'mongodb://localhost:27017'
 db = client['cryptocurrency']
 orderbooks = db['deribit_orderbooks']
 transactions = db['deribit_transactions']
